@@ -23,7 +23,7 @@ namespace Socialapp.Api.Controllers
             return users;
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<ActionResult<AppUser>> GetUserAsync([FromQuery] int id)
         {
             var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
