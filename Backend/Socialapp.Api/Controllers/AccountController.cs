@@ -44,10 +44,10 @@ namespace Socialapp.Api.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<AppUser>> Login(LoginDto loginDto)
         {
-            var user = await _Context.Users.SingleOrDefaultAsync(user => user.UserName == loginDto.UserName);
+            var user = await _Context.Users.SingleOrDefaultAsync(x => x.UserName == loginDto.UserName.ToLower());
             if (user == null)
             {
-                return Unauthorized();
+                return Unauthorized("Invalid username");
             }
 
             using var hmac = new HMACSHA512(user.PasswordSalt);
