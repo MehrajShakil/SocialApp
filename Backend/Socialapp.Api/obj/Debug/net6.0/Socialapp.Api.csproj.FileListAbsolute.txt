@@ -56,3 +56,11 @@ F:\Personal Project\Build an app with asp.net core and and angular from scratch\
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net6.0\Socialapp.Api.pdb
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net6.0\Socialapp.Api.genruntimeconfig.cache
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net6.0\ref\Socialapp.Api.dll
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

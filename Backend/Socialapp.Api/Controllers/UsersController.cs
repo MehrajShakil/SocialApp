@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Socialapp.Api.Data;
 using Socialapp.Api.Entities;
 
 namespace Socialapp.Api.Controllers
 {
-    [ApiController]
-    [Route("api/[Controller]")] //   ...../api/users
-    public class UsersController : ControllerBase
+
+    [Authorize]
+    public class UsersController : BaseApiController
     {
         private readonly DataContext _context;
 
@@ -16,6 +17,7 @@ namespace Socialapp.Api.Controllers
             _context = context;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsersAsync()
         {
