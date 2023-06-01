@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../_Services/account.service';
+import { Observable, of } from 'rxjs';
+import { User } from '../_models/user';
 
 @Component({
   selector: 'app-nav',
@@ -9,7 +11,7 @@ import { AccountService } from '../_Services/account.service';
 export class NavComponent implements OnInit {
 
   model: any = {};
-  loggedIn = false;
+  currentUser$: Observable<User|any> = of(null);
 
   constructor(private accountService: AccountService){}
 
@@ -17,7 +19,7 @@ export class NavComponent implements OnInit {
 
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.currentUser$ = this.accountService.currentUser$;
   }
 
   Login(){
@@ -25,12 +27,15 @@ export class NavComponent implements OnInit {
     this.accountService.login(this.model).subscribe({
         next: (response: any) => {
           console.log(response);
-          this.loggedIn = true;
         },
         error: (error: any) => {
           console.log(error);
         }
     })
+  }
+
+  logout(){
+    this.accountService.logout();
   }
 
 }
