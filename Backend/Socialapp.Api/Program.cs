@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using Socialapp.Api.Data;
 using Socialapp.Api.Extensions;
 using Socialapp.Api.Interfaces;
+using Socialapp.Api.Middleware;
 using Socialapp.Api.Services;
 using System.Text;
 
@@ -28,6 +29,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
 app.UseAuthentication();
