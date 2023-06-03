@@ -64,3 +64,5 @@ F:\Personal Project\Build an app with asp.net core and and angular from scratch\
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net6.0\Data\UserSeedData.json
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net6.0\Newtonsoft.Json.dll

@@ -16,6 +16,9 @@ namespace Socialapp.Api.Extensions
 
             services.AddCors();
             services.AddTransient<ITokenService, TokenService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             return services;
         }
     }
