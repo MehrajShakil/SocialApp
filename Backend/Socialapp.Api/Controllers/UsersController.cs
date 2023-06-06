@@ -1,11 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Socialapp.Api.DTOs;
-using Socialapp.Api.Entities;
 using Socialapp.Api.Interfaces;
-using System.ComponentModel;
 
 namespace Socialapp.Api.Controllers
 {
