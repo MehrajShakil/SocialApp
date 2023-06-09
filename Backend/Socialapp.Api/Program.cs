@@ -1,12 +1,6 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Socialapp.Api.Data;
 using Socialapp.Api.Extensions;
-using Socialapp.Api.Interfaces;
 using Socialapp.Api.Middleware;
-using Socialapp.Api.Services;
-using System.Text;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +11,6 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddIdentityServices(builder.Configuration);
-
 
 
 
