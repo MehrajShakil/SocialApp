@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Socialapp.Api.DTOs;
 using Socialapp.Api.Interfaces;
+using System.Security.Claims;
 
 namespace Socialapp.Api.Controllers
 {
@@ -31,6 +32,21 @@ namespace Socialapp.Api.Controllers
         public async Task<ActionResult<MemberDto>> GetUserAsync(string username)
         {
             return await _userRepository.GetMemberAsync(username);   
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> UpdateUser(MemberUpdateDto memberUpdateDto)
+        {
+            var username = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var user = await _userRepository.GetUserByUsernameAsync(username);
+
+            if (user is null) return NotFound();
+
+            _ = _mapper.Map(memberUpdateDto, user);
+
+            if (await _userRepository.SaveAllAsync()) return NoContent();
+
+            return BadRequest("Failed to update user");
         }
     }
 }

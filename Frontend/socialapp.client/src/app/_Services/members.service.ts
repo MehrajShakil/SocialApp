@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
 import { Member } from '../_models/member';
-import { catchError, throwError } from 'rxjs';
+import { map, of  } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,15 +10,34 @@ import { catchError, throwError } from 'rxjs';
 export class MembersService {
 
   baseUrl = environment.apiUrl;
+  members: Member[] = [];
+
   constructor(private http: HttpClient) { }
 
 
   getMembers(): any{
-    return this.http.get<Member[]>(this.baseUrl + 'users');
+    if(this.members.length > 0) return of(this.members);
+    return this.http.get<Member[]>(this.baseUrl + 'users').pipe(
+      map((members: Member[]) => {
+        this.members = members;
+        return members;
+      })
+    )
   }
 
   getMember(username: string): any{
+    const member = this.members.find(member => member.userName === username);
+    if(member) return of(member);
     return this.http.get<Member>(this.baseUrl + 'users/' + username)
+  }
+
+  updateMember(member: Member): any{
+    return this.http.put(this.baseUrl + 'users', member).pipe(
+      map(() => {
+        const index = this.members.indexOf(member);
+        this.members[index] = {...this.members[index], ...member};
+      })
+    )
   }
 
 }
