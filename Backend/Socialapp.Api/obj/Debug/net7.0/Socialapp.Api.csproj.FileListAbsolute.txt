@@ -8,6 +8,7 @@ F:\Personal Project\Build an app with asp.net core and and angular from scratch\
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\Socialapp.Api.pdb
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\AutoMapper.dll
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\CloudinaryDotNet.dll
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\Humanizer.dll
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\Microsoft.Data.Sqlite.dll
@@ -76,4 +77,3 @@ F:\Personal Project\Build an app with asp.net core and and angular from scratch\
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.pdb
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.genruntimeconfig.cache
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\ref\Socialapp.Api.dll
-F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\CloudinaryDotNet.dll
