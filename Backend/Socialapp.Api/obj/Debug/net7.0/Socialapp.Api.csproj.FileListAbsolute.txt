@@ -1,3 +1,10 @@
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.csproj.AssemblyReference.cache
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.GeneratedMSBuildEditorConfig.editorconfig
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.AssemblyInfoInputs.cache
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.AssemblyInfo.cs
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.csproj.CoreCompileInputs.cache
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.MvcApplicationPartsAssemblyInfo.cs
+F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.MvcApplicationPartsAssemblyInfo.cache
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\appsettings.Development.json
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\appsettings.json
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\Data\UserSeedData.json
@@ -56,13 +63,6 @@ F:\Personal Project\Build an app with asp.net core and and angular from scratch\
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\runtimes\win-arm64\native\e_sqlite3.dll
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\runtimes\win-x64\native\e_sqlite3.dll
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\bin\Debug\net7.0\runtimes\win-x86\native\e_sqlite3.dll
-F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.csproj.AssemblyReference.cache
-F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.GeneratedMSBuildEditorConfig.editorconfig
-F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.AssemblyInfoInputs.cache
-F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.AssemblyInfo.cs
-F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.csproj.CoreCompileInputs.cache
-F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.MvcApplicationPartsAssemblyInfo.cs
-F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\Socialapp.Api.MvcApplicationPartsAssemblyInfo.cache
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\staticwebassets\msbuild.Socialapp.Api.Microsoft.AspNetCore.StaticWebAssets.props
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\staticwebassets\msbuild.build.Socialapp.Api.props
 F:\Personal Project\Build an app with asp.net core and and angular from scratch\SocialApp\Backend\Socialapp.Api\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Socialapp.Api.props
