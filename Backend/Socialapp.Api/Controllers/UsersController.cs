@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Socialapp.Api.DTOs;
 using Socialapp.Api.Entities;
 using Socialapp.Api.Extensions;
+using Socialapp.Api.Helpers;
 using Socialapp.Api.Interfaces;
 using System.Security.Claims;
 
@@ -26,9 +27,26 @@ namespace Socialapp.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsersAsync()
+        public async Task<ActionResult<PagedList<MemberDto>>> GetUsersAsync([FromQuery] UserParams userParams)
         {
-            var users = await _userRepository.GetMembersAsync();
+
+            var currentUser = await _userRepository.GetUserByUsernameAsync(User.GetUsername());
+            userParams.CurrentUserName = currentUser.UserName;
+
+            if (string.IsNullOrEmpty(userParams.Gender))
+            {
+                userParams.Gender = currentUser.Gender;
+            }
+
+            var users = await _userRepository.GetMembersAsync(userParams);
+            if(userParams.Gender == "female")
+            {
+                foreach(var user in users)
+                {
+                    user.PhotoUrl = null;
+                }
+            }
+            Response.AddPaginationHeader(new PaginationHeader(users.CurrentPage, users.PageSize, users.TotalCount, users.TotalPages));
             return Ok(users);
         }
 

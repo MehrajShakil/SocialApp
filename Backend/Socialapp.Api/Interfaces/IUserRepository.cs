@@ -1,5 +1,6 @@
 ﻿using Socialapp.Api.DTOs;
 using Socialapp.Api.Entities;
+using Socialapp.Api.Helpers;
 
 namespace Socialapp.Api.Interfaces
 {
@@ -10,9 +11,7 @@ namespace Socialapp.Api.Interfaces
         Task<IEnumerable<AppUser>> GetUsersAsync();
         Task<AppUser> GetUserByIdAsync(int id);
         Task<AppUser> GetUserByUsernameAsync(string username);
-        Task<IEnumerable<MemberDto>> GetMembersAsync();
+        Task<PagedList<MemberDto>> GetMembersAsync(UserParams userParams);
         Task<MemberDto> GetMemberAsync(string username);
-
-
     }
 }
