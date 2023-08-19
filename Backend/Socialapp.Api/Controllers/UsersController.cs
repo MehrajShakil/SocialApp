@@ -26,6 +26,7 @@ namespace Socialapp.Api.Controllers
             _photoService = photoService;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult<PagedList<MemberDto>>> GetUsersAsync([FromQuery] UserParams userParams)
         {
@@ -50,6 +51,7 @@ namespace Socialapp.Api.Controllers
             return Ok(users);
         }
 
+        [Authorize(Roles="Member")]
         [HttpGet("{username}")]
         public async Task<ActionResult<MemberDto>> GetUser(string username)
         {

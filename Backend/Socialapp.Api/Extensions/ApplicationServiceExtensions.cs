@@ -20,7 +20,8 @@ namespace Socialapp.Api.Extensions
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.Configure<CloudinarySettings>(configuration.GetSection(nameof(CloudinarySettings)));
-            services.AddScoped<IPhotoService, PhotoService>();  
+            services.AddScoped<IPhotoService, PhotoService>();
+            services.AddSignalR();
 
             return services;
         }

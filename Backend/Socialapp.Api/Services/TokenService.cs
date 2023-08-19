@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
 using Socialapp.Api.Entities;
 using Socialapp.Api.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
@@ -10,16 +11,26 @@ namespace Socialapp.Api.Services
     public class TokenService : ITokenService
     {
         private readonly SymmetricSecurityKey _symmetricSecurityKey;
-        public TokenService(IConfiguration configuration)
+        private readonly UserManager<AppUser> userManger;
+
+        public TokenService(IConfiguration configuration, UserManager<AppUser> userManger)
         {
             _symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["TokenKey"]));
+            this.userManger = userManger;
         }
-        public string CreateToken(AppUser appUser)
+
+
+        public async Task<string> CreateToken(AppUser appUser)
         {
             var claims = new List<Claim>
             {
+                new Claim(JwtRegisteredClaimNames.NameId, appUser.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.NameId, appUser.UserName)
             };
+
+            var roles = await userManger.GetRolesAsync(appUser);
+
+            claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
 
             var credintials = new SigningCredentials(_symmetricSecurityKey, SecurityAlgorithms.HmacSha512Signature);
 

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +24,12 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { DatePickerComponent } from './_forms/date-picker/date-picker.component';
+import { HasRoleDirective } from './_directives/has-role.directive';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { PhotoManagementComponent } from './Admin/photo-management/photo-management.component';
+import { UserManagementComponent } from './Admin/user-management/user-management.component';
+import { AdminPanelComponent } from './Admin/admin-panel/admin-panel.component';
+import { RolesModalComponent } from './modals/roles-modal/roles-modal.component';
 
 
 
@@ -44,7 +50,12 @@ import { DatePickerComponent } from './_forms/date-picker/date-picker.component'
     MemberEditComponent,
     PhotoEditorComponent,
     TextInputComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    HasRoleDirective,
+    UserManagementComponent,
+    PhotoManagementComponent,
+    AdminPanelComponent,
+    RolesModalComponent
    ],
   imports: [
     BrowserModule,
@@ -60,6 +71,9 @@ import { DatePickerComponent } from './_forms/date-picker/date-picker.component'
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    NO_ERRORS_SCHEMA
+  ]
 })
 export class AppModule { }
