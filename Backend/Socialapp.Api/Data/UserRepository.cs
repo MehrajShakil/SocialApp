@@ -33,7 +33,7 @@ namespace Socialapp.Api.Data
             var query = _context.Users.AsQueryable();
 
             query = query.Where(q => q.UserName != userParams.CurrentUserName);
-            query = query.Where(q => q.Gender == userParams.Gender);
+            //query = query.Where(q => q.Gender == userParams.Gender);
             
             var minDob = DateOnly.FromDateTime(DateTime.Today.AddYears(-userParams.MaxAge - 1));
 

@@ -25,7 +25,7 @@ namespace Socialapp.Api.Services
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.NameId, appUser.Id.ToString()),
-                new Claim(JwtRegisteredClaimNames.NameId, appUser.UserName)
+                new Claim(JwtRegisteredClaimNames.Name, appUser.UserName)
             };
 
             var roles = await userManger.GetRolesAsync(appUser);

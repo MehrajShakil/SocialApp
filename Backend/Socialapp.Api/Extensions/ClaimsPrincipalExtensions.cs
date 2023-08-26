@@ -6,7 +6,9 @@ namespace Socialapp.Api.Extensions
     {
         public static string GetUsername(this ClaimsPrincipal user)
         {
-            return user.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            var username = user.Claims.Where(claim => claim.Type == "name").FirstOrDefault().Value;
+            return username ?? string.Empty;
         }
     }
 }

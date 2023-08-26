@@ -30,7 +30,6 @@ namespace Socialapp.Api.Controllers
         [HttpGet]
         public async Task<ActionResult<PagedList<MemberDto>>> GetUsersAsync([FromQuery] UserParams userParams)
         {
-
             var currentUser = await _userRepository.GetUserByUsernameAsync(User.GetUsername());
             userParams.CurrentUserName = currentUser.UserName;
 
@@ -51,7 +50,7 @@ namespace Socialapp.Api.Controllers
             return Ok(users);
         }
 
-        [Authorize(Roles="Member")]
+        [Authorize(Roles="Moderator")]
         [HttpGet("{username}")]
         public async Task<ActionResult<MemberDto>> GetUser(string username)
         {
